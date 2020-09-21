@@ -1,0 +1,343 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-09-20 08:43+0000\n"
+"PO-Revision-Date: 2020-09-16 05:50+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: app/__init__.py:20
+msgid "Please log in to access this page."
+msgstr "请登录以访问此页面。"
+
+#: app/forms.py:10
+msgid "This e-mail address already exists."
+msgstr "此邮箱地址已存在。"
+
+#: app/forms.py:13 app/forms.py:18
+msgid "E-mail is required."
+msgstr "请填写邮箱地址。"
+
+#: app/forms.py:13 app/forms.py:18
+msgid "You must enter an E-mail address."
+msgstr "您需要输入一个邮箱地址。"
+
+#: app/forms.py:14 app/forms.py:19
+msgid "Password is required."
+msgstr "请填写密码。"
+
+#: app/forms.py:20
+msgid "Confirm password is required."
+msgstr "请填写确认密码。"
+
+#: app/forms.py:20
+msgid "Passwords are not matched."
+msgstr "密码不一致。"
+
+#: app/forms.py:34
+msgid ""
+"This nickname has invalid characters. Please use letters, numbers, dots "
+"and underscores only."
+msgstr "此昵称存在不恰当的文字。请仅限于使用英文字母，数字，'.'和'_'。"
+
+#: app/forms.py:40
+msgid "This nickname is already in use. Please choose another one."
+msgstr "此昵称已经被使用。请选择另一个昵称。"
+
+#: app/views.py:28
+msgid "Your post is live now!"
+msgstr "您的内容已生效。"
+
+#: app/views.py:50
+msgid "Login succeed!"
+msgstr "登录成功！"
+
+#: app/views.py:53
+msgid "Login fail! Please login in again."
+msgstr "登录失败！请重新登录！"
+
+#: app/views.py:74
+msgid "Register succeed! Please login."
+msgstr "注册成功！请登录。"
+
+#: app/views.py:90 app/views.py:116 app/views.py:136
+#, python-format
+msgid "User %(nickname)s not found."
+msgstr "未找到昵称为%(nickname)s的用户"
+
+#: app/views.py:105
+msgid "Changes are saved successfully."
+msgstr "修改成功。"
+
+#: app/views.py:119
+msgid "You can't follow yourself!"
+msgstr "您不能关注您自己！"
+
+#: app/views.py:123
+#, python-format
+msgid "You already follow %(nickname)s ."
+msgstr "您已经关注%(nickname)s。"
+
+#: app/views.py:127
+#, python-format
+msgid "You are now following %(nickname)s ."
+msgstr "您现在正关注%(nickname)s。"
+
+#: app/views.py:139
+msgid "You can't unfollow yourself!"
+msgstr "你不能取消关注您自己。"
+
+#: app/views.py:143
+#, python-format
+msgid "You are not following %(nickname)s ."
+msgstr "您没有关注%(nickname)s。"
+
+#: app/views.py:147
+#, python-format
+msgid "You have stopped following %(nickname)s ."
+msgstr "您已经取消关注%(nickname)s。"
+
+#: app/views.py:157
+msgid "Sorry! You can\t delete this post!"
+msgstr "抱歉！您不能删除此内容。"
+
+#: app/views.py:161
+msgid "Delete the post successfully!"
+msgstr "成功删除此内容/。"
+
+#: app/templates/base.html:19
+msgid "Microblog"
+msgstr "微·博客"
+
+#: app/templates/base.html:19
+msgid "Home"
+msgstr "主页"
+
+#: app/templates/base.html:20
+msgid "My Profile"
+msgstr "我的简介"
+
+#: app/templates/base.html:21
+msgid "Logout"
+msgstr "退出登录"
+
+#: app/templates/base.html:25
+msgid "Search:"
+msgstr "查找："
+
+#: app/templates/base.html:25
+msgid "Enter key words to search"
+msgstr "请输入关键词以进行查找。"
+
+#: app/templates/base.html:58
+msgid "Translated text: "
+msgstr "翻译文："
+
+#: app/templates/base.html:61
+msgid "Error: Could not contact server."
+msgstr "错误：链接服务器失败。"
+
+#: app/templates/edit.html:7
+msgid "Edit My Profile"
+msgstr "编辑我的简介"
+
+#: app/templates/edit.html:16
+msgid "Nickname:"
+msgstr "昵称："
+
+#: app/templates/edit.html:25
+msgid "About me:"
+msgstr "关于我："
+
+#: app/templates/edit.html:30
+msgid "Save Changes"
+msgstr "保存修改"
+
+#: app/templates/edit.html:30
+msgid "Return"
+msgstr "返回"
+
+#: app/templates/index.html:7
+#, python-format
+msgid "Hello, %(nickname)s!"
+msgstr "您好，%(nickname)s！"
+
+#: app/templates/index.html:18
+msgid "Post!"
+msgstr "提交！"
+
+#: app/templates/index.html:43 app/templates/user.html:42
+msgid "Newer posts"
+msgstr "下一页"
+
+#: app/templates/index.html:44 app/templates/user.html:43
+msgid "Older posts"
+msgstr "上一页"
+
+#: app/templates/login.html:12
+msgid "Sign in to Microblog"
+msgstr "登录到微·博客"
+
+#: app/templates/login.html:20 app/templates/register.html:16
+msgid "E-mail:"
+msgstr "邮箱地址："
+
+#: app/templates/login.html:30 app/templates/register.html:28
+msgid "Password:"
+msgstr "密码："
+
+#: app/templates/login.html:40
+msgid "Remember Me"
+msgstr "记住我"
+
+#: app/templates/login.html:45
+msgid "Sign In"
+msgstr "登录"
+
+#: app/templates/login.html:45
+msgid "Register an account"
+msgstr "注册账号"
+
+#: app/templates/post.html:5
+msgid "says:"
+msgstr "说："
+
+#: app/templates/post.html:6
+msgid "Delete"
+msgstr "删除"
+
+#: app/templates/post.html:7
+#, python-format
+msgid "Written on: %(momentjs)s"
+msgstr "发表于：%(momentjs)s"
+
+#: app/templates/post.html:9
+msgid "Translate"
+msgstr "翻译"
+
+#: app/templates/register.html:7 app/templates/register.html:47
+msgid "Register"
+msgstr "注册"
+
+#: app/templates/register.html:37
+msgid "Confirm Password:"
+msgstr "确认密码"
+
+#: app/templates/register.html:47
+msgid "Login"
+msgstr "登录"
+
+#: app/templates/user.html:13
+msgid "Last seen on: "
+msgstr "最近的操作"
+
+#: app/templates/user.html:14
+msgid "followers"
+msgstr "关注者"
+
+#: app/templates/user.html:14
+msgid "following"
+msgstr "已关注"
+
+#~ msgid "E-mail is required"
+#~ msgstr ""
+
+#~ msgid "You must enter an E-mail address"
+#~ msgstr ""
+
+#~ msgid "Password is required"
+#~ msgstr ""
+
+#~ msgid "Confirm password is required"
+#~ msgstr ""
+
+#~ msgid "Passwords are not matched"
+#~ msgstr ""
+
+#~ msgid "Your post is live now!"
+#~ msgstr ""
+
+#~ msgid "This e-mail address already exists."
+#~ msgstr "此邮箱已被注册。"
+
+#~ msgid "E-mail is required."
+#~ msgstr ""
+
+#~ msgid "You must enter an E-mail address."
+#~ msgstr ""
+
+#~ msgid "Password is required."
+#~ msgstr ""
+
+#~ msgid "Confirm password is required."
+#~ msgstr ""
+
+#~ msgid "Passwords are not matched."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This nickname has invalid characters. "
+#~ "Please use letters, numbers, dots and"
+#~ " underscores only."
+#~ msgstr ""
+
+#~ msgid "This nickname is already in use. Please choose another one."
+#~ msgstr ""
+
+#~ msgid "Login succeed!"
+#~ msgstr ""
+
+#~ msgid "Hello,"
+#~ msgstr ""
+
+#~ msgid "Sign in to Microblog"
+#~ msgstr "登录访问微·博客"
+
+#~ msgid "Login fail! Please login in again."
+#~ msgstr ""
+
+#~ msgid "Register succeed! Please login."
+#~ msgstr ""
+
+#~ msgid "Changes are saved successfully."
+#~ msgstr ""
+
+#~ msgid "User %(nickname)s not found."
+#~ msgstr ""
+
+#~ msgid "You can't follow yourself!"
+#~ msgstr ""
+
+#~ msgid "You already follow %(nickname)s ."
+#~ msgstr ""
+
+#~ msgid "You are now following %(nickname)s ."
+#~ msgstr ""
+
+#~ msgid "You can't unfollow yourself!"
+#~ msgstr ""
+
+#~ msgid "You are not following %(nickname)s ."
+#~ msgstr ""
+
+#~ msgid "You have stopped following %(nickname)s ."
+#~ msgstr ""
+
+#~ msgid "Sorry! You can\t delete this post!"
+#~ msgstr ""
+
+#~ msgid "Delete the post successfully!"
+#~ msgstr ""
+

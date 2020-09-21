@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div class='container-fluid'>
+  <div class='row justify-content-center'>
+    <div class='col-auto'>
+      {% autoescape false %}
+        <h1>{{_('Hello, %(nickname)s!', nickname=g.user.nickname)}}</h1><br>
+      {% endautoescape %}
+    </div>
+  </div>
+  <div class='row justify-content-center'>
+    <div class='col-auto'>
+      <form action='' method='post' name='post'>
+        {{form.hidden_tag()}}
+        <table>
+          <tr>
+            <td>{{form.post(size=25,maxlength=140)}}</td>
+	    <td><input type='submit' value={{_('Post!')}}></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+    	      {% for error in form.post.errors %}
+                <span style='color: red'>{{error}}</span>
+              {% endfor %}
+            </td>
+            <td></td>
+          </tr>
+        </table>
+      </form><br><br>
+    </div>
+  </div>
+  <div class='row justify-content-center'>
+    <div class='col-auto'>
+      {% for post in posts.items %}
+        {% include 'post.html' %}
+      {% endfor %}
+    </div>
+  </div><br>
+  <div class='row justify-content-center'>
+    <div class='col-auto'>
+      <font size=2>
+        {% if posts.has_prev %}<a href='{{url_for('index', page=posts.prev_num)}}'>&#60&#60 {{_('Newer posts')}}</a>{% else %}&#60&#60 {{_('Newer posts')}}{% endif %} |
+        {% if posts.has_next %}<a href='{{url_for('index', page=posts.next_num)}}'>{{_('Older posts')}} &#62&#62</a>{% else %}{{_('Older posts')}} &#62&#62{% endif %}
+      </font>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+<table style='border-collapse:separate;border-spacing:20px 10px;'>
+  <tr valign='center'>
+    <td><a href='{{url_for('user', nickname=post.author.nickname)}}'><img src='{{post.author.avatar(80)}}'></a></td>
+    <td>
+      <i>{{post.author.nickname}}</i> {{ _('says:') }}<br>
+      <b><span id='post{{post.id}}'>{{post.body}}</span></b>{% if post.user_id==g.user.id %}&#160;&#160;&#160;&#160;<a href='{{url_for('delete_post', post_id=post.id)}}'><font size=1>{{ _('Delete') }}</font></a>{% endif %}<br>
+      <font size=1>{{ _('Written on: %(momentjs)s', momentjs=momentjs(post.timestamp).fromNow()) }}</font>
+      {% if post.language != None and post.language != '' and post.language != g.locale %}
+      <div><span id='translation{{post.id}}'><a href='javascript:$jq().translate("{{g.locale}}", "#post{{post.id}}", "#translation{{post.id}}", "#loading{{post.id}}");'><font size=2>{{_('Translate')}}</font></a></span>
+      </div>
+      {% endif %}
+    </td>
+  </tr>
+</table>

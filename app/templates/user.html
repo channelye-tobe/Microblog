@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='container-fluid'>
+  <div class='row justify-content-center'>
+    <div class='col-auto'>
+      <table>
+        <tr valign='top'>
+          <td style='width:200px'><img src='{{user.avatar(160)}}'></td>
+          <td>
+            <h1>{{user.nickname}}</h1>
+            {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+	    {% if user.last_seen %}<p><i>{{_('Last seen on: ')}}{{momentjs(user.last_seen).calendar()}}</i></p>{% endif %}
+	    <p>{{user.followers.count()}} {{_('followers')}} | {{user.followed.count()}} {{_('following')}} |
+            {% if g.user.id == user.id %}
+              <a href='{{url_for('edit')}}'>Edit</a>
+  	    {% elif not g.user.is_following(user) %}
+              <a href='{{url_for('follow', nickname=user.nickname)}}'>Follow</a>
+  	    {% else%}
+              <a href='{{url_for('unfollow', nickname=user.nickname)}}'>Unfollow</a>
+            {% endif %}
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<hr><br>
+<div class='container-fluid'>
+  <div class='row justify-content-center'>
+    <div class='col-auto'>
+      {% for post in posts.items %}
+        {% include 'post.html' %}<br>
+      {% endfor %}
+    </div>
+  </div>
+  <div class='row justify-content-center'>
+    <div class='col-auto'>
+      <p>
+        <font size=2>
+		{% if posts.has_prev %}<a href='{{url_for('user', nickname=user.nickname, page=posts.prev_num)}}'>&#60&#60 {{_('Newer posts')}}</a>{% else %}&#60&#60 {{_('Newer posts')}}{% endif %} |
+		{% if posts.has_next %}<a href='{{url_for('user', nickname=user.nickname, page=posts.next_num)}}'>{{_('Older posts')}} &#62&#62</a>{% else %}{{_('Older posts')}} &#62&#62{% endif %}
+        </font>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock%}

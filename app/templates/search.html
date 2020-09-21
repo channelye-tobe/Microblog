@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Search</h1>
+  {% for post in posts%}
+    {% include 'post.html' %}
+  {% endfor %}
+  <nav>
+    <ul>
+      <li>
+        <a href='{{ prev_url or '#' }}'>Prev page &larr;</a>
+      </li>
+      <li>
+        <a href='{{ next_url or '#' }}'>Next page &rarr;</a>
+      </li>
+    </ul>
+  </nav>
+{% endblock %}
+
